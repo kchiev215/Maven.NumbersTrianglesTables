@@ -11,13 +11,13 @@ public class TableUtilities {
     }
 
     public static String getMultiplicationTable(int tableSize) {
-        StringBuilder s = new StringBuilder();
-        for (int i = 1; i < 4; i++) {
-            for (int j = 1; j < 4; j++) {
-                s.append(String.format("%3d |", i * j));
+        String table = "";
+        for(int i = 0; i <tableSize;i++){
+            for(int j = 0; j <tableSize; j++){
+                table = table + String.format("%3d",j*i);
             }
-            s.append("\n");
+            table = table + "\n";
         }
-        return s.toString();
+        return table;
     }
 }
